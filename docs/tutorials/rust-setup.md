@@ -23,28 +23,31 @@ Rust is one of the most popular programming language for web development. It is 
 - Understand Command-line basics. 
 
 
+## **Setting up for the Project**
+
 ## Git Repository Setup
 In this section, we will create a local repository for this project and link it to GitHub. 
 
 1. Open your terminal or command prompt, and create a new directory **comp423-rust** using the following commands: 
 
-```console
-mkdir comp423-rust
-cd comp423-rust
-```
+    ```console
+    mkdir comp423-rust
+    cd comp423-rust
+    ```
 
-!!! directory note
-    This step will create a folder comp423-rust in your home directory. If you want this folder elsewhere, go ahead and change to that parent directory first. 
+    !!! note "Create a New Directory"
+
+        This step will create a folder comp423-rust in your home directory. If you want this folder elsewhere, go ahead and change to that parent directory first. 
 
  
 2. Initialize a new Git repository and create a README file: 
 
-```console
-git init
-echo "# Setting up Rust dev container" > README.md
-git add README.md
-git commit -m "Initialize commit with README"
-```
+    ```console
+    git init
+    echo "# Setting up Rust dev container" > README.md
+    git add README.md
+    git commit -m "Initialize commit with README"
+    ```
 
 
 3. Create remote repository on Github: 
@@ -78,6 +81,12 @@ git commit -m "Initialize commit with README"
         The --set-upstream flag sets up main branch to track remote branch. It allows you to just write ```git push origin``` in future pushes and pull without specifying ```main``` branch. 
 
     - To view your changes, you can refresh GitHub repository or use ```git log``` in terminal/command prompt to see the commit. 
+
+
+
+
+## Dev Container Setup
+    
 
 
 ### Citations: 
