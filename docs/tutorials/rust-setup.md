@@ -12,21 +12,72 @@ Rust is one of the most popular programming language for web development. It is 
 
 
 ## Prerequisites
-1. Sign up at [GitHub](https://github.com/) if you don't have an account already. 
+- Sign up at [GitHub](https://github.com/) if you don't have an account already. 
 
-2. Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
+- Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
 
-3. Download and install [Visual Studio Code](https://code.visualstudio.com/) (VS Code). 
+- Download and install [Visual Studio Code](https://code.visualstudio.com/) (VS Code). 
 
-4. Install [Docker](https://www.docker.com/products/docker-desktop/)
+- Install [Docker](https://www.docker.com/products/docker-desktop/)
 
-5. Understand Command-line basics. 
-
-
+- Understand Command-line basics. 
 
 
+## Git Repository Setup
+In this section, we will create a local repository for this project and link it to GitHub. 
+
+1. Open your terminal or command prompt, and create a new directory **comp423-rust** using the following commands: 
+
+```console
+mkdir comp423-rust
+cd comp423-rust
+```
+
+!!! directory note
+    This step will create a folder comp423-rust in your home directory. If you want this folder elsewhere, go ahead and change to that parent directory first. 
+
+ 
+2. Initialize a new Git repository and create a README file: 
+
+```console
+git init
+echo "# Setting up Rust dev container" > README.md
+git add README.md
+git commit -m "Initialize commit with README"
+```
 
 
+3. Create remote repository on Github: 
+    - In Github, log in and navigate to [Create a New Repository](https://github.com/new) page
+    - Fill in the following details: 
+        - **Repository Name**: comp423-rust
+        - **Description**: "Rust dev container for coding in Rust"
+        - **Visibility**: Public
+    - Leave the rest options as it is and Click **Create Repository**
+
+
+4. Link local repository to Github
+    - Open your terminal or command prompt, and add the GitHub repository as a remote. *Note*: Change ```<your-username>``` with your GitHub username. 
+
+    ```console
+    git remote add origin https://github.com/<your-username>/comp423-rust.git
+    ```
+
+    - Use ```git branch``` to check default branch name. 
+        - If default branch name is not ```main```, use the following conmand to rename: 
+        ```console
+            git branch -M main
+        ```
+
+    - Push your local commits to Github repository:
+
+    ```console
+        git push --set-upstream origin main
+    ```
+    !!! Note on --set-upstream flag
+        The --set-upstream flag sets up main branch to track remote branch. It allows you to just write ```git push origin``` in future pushes and pull without specifying ```main``` branch. 
+
+    - To view your changes, you can refresh GitHub repository or use ```git log``` in terminal/command prompt to see the commit. 
 
 
 ### Citations: 
