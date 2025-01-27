@@ -4,7 +4,7 @@
 
 * Reviewer: [Malak](https://github.com/malaksoubai)
 
-## Introduction
+## Introduction :heart:
 
 Hello! Welcome to the tutorial for creating a new project in dev container for Rust! I am excited to take you on this journey to learn step-by-step how to make your own Rust-specific dev container. 
 
