@@ -112,7 +112,7 @@ In this section, we will create a dev container for Rust!
     [package]
     name = "hello_cargo"
     version = "0.1.0"
-    edition = "2025"
+    edition = "2024"
     ```
 
 3. Reopen the project in a VSCode Dev Container by pressing ```Ctrl+Shift+P``` (or ```Cmd+Shift+P ``` on Mac), typing "Dev Containers: Reopen in Container," and selecting the option. This may takes a few minutes while the image is downloaded and the requirements are installed.
