@@ -130,13 +130,25 @@ In this section, we will create a dev container for Rust!
     cd hello_cargo
     ```
 
-    !!! note{Note on ```---vcs``` none}
+    !!! note "Note on ```---vcs``` none"
+
         The **```---vcs```** flag does not create a new ```git``` repository automatically on your behalf. 
 
 
 
 
+## Create a ```Hello World``` Example
+1. Create a new rust file name ```hello_world.rs``` and print **Hello, World!** using the following content: 
 
+    ```rust
+    fn main() {
+        println!("Hello, world!");
+    }
+    ```
+
+    Congradulation on writing your first Rust program in a dev container! 
+
+    
 
 
 
