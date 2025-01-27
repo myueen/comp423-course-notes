@@ -72,7 +72,7 @@ In this section, we will create a local repository for this project and link it 
     - Push your local commits to Github repository:
 
     ```console
-        git push --set-upstream origin main
+    git push --set-upstream origin main
     ```
     !!! Note on --set-upstream flag
         The --set-upstream flag sets up main branch to track remote branch. It allows you to just write ```git push origin``` in future pushes and pull without specifying ```main``` branch. 
@@ -93,29 +93,49 @@ In this section, we will create a dev container for Rust!
     - Add the following content inside ```devcontainer.json```. 
 
     ```json
-        {
-            "name": "comp423 Rust",
-            "image": "mcr.microsoft.com/devcontainers/rust:latest",
-            "customizations": {
-                "vscode": {
-                    "settings": {},
-                    "extensions": ["ms-rust.rust"]
-                }
-            },
-            "postCreateCommand": "pip install -r cargo.toml"
-        }
+    {
+        "name": "comp423 Rust",
+        "image": "mcr.microsoft.com/devcontainers/rust:latest",
+        "customizations": {
+            "vscode": {
+                "settings": {},
+                "extensions": ["ms-rust.rust"]
+            }
+        },
+        "postCreateCommand": "pip install -r cargo.toml"
+    }
     ```
 
 
-2. Add ```cargo.toml``` Rust Dependency Configuration
-    - Add **```cargo.toml```** with the following content: 
+2. Add ```cargo.toml``` Rust dependency configuration with the following content: 
+    
     ```
-        [package]
-        name = "comp423-rust"
-        version = "0.1.0"
-     ```
+    [package]
+    name = "hello_cargo"
+    version = "0.1.0"
+    edition = "2025"
+    ```
 
 3. Reopen the project in a VSCode Dev Container by pressing ```Ctrl+Shift+P``` (or ```Cmd+Shift+P ``` on Mac), typing "Dev Containers: Reopen in Container," and selecting the option. This may takes a few minutes while the image is downloaded and the requirements are installed.
+
+
+
+
+
+## Initialize a Rust Project
+1. Run this following commands in your terminal (inside the container). This command creates a new directory and project called *hello_cargo*. 
+
+    ```console
+    cargo new hello_cargo --vcs none
+    cd hello_cargo
+    ```
+
+    !!! note{Note on ```---vcs``` none}
+        The **```---vcs```** flag does not create a new ```git``` repository automatically on your behalf. 
+
+
+
+
 
 
 
@@ -126,3 +146,5 @@ In this section, we will create a dev container for Rust!
 
 ### Citations: 
 1. Jordan, Kris. "Starting a Static Website Project with MkDocs," _COMP423 - Spring 2025_, https://comp423-25s.github.io/resources/MkDocs/tutorial/#step-2-add-requirementstxt-python-dependency-configuration. 
+
+2. Klabnik, Steve and Nichols, Carol, "The Rust Programming Language," https://doc.rust-lang.org/book/.
