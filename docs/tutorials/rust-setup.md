@@ -67,10 +67,7 @@ In this section, we will create a local repository for this project and link it 
     ```
 
     - Use ```git branch``` to check default branch name. 
-        - If default branch name is not ```main```, use the following conmand to rename: 
-        ```console
-            git branch -M main
-        ```
+        - If default branch name is not ```main```, use the following conmand to rename: ```git branch -M main```
 
     - Push your local commits to Github repository:
 
@@ -86,7 +83,45 @@ In this section, we will create a local repository for this project and link it 
 
 
 ## Dev Container Setup
-    
+In this section, we will create a dev container for Rust! 
+
+1. Add Development Container Configuration
+    - Go to VS Code and open ```comp423-rust``` directory. 
+    - Install the **Dev Containers** and **rust-analyzer** extensions for VS Code.
+    - Check Rust version using this commend: ```rustc --version``` in terminal or command prompt. 
+    - Create a ```.devcontainer``` directory in the root of your project with the following file inside this "hidden" configuration directory: ```.devcontainer/devcontainer.json```
+    - Add the following content inside ```devcontainer.json```. 
+
+    ```json
+        {
+            "name": "comp423 Rust",
+            "image": "mcr.microsoft.com/devcontainers/rust:latest",
+            "customizations": {
+                "vscode": {
+                    "settings": {},
+                    "extensions": ["ms-rust.rust"]
+                }
+            },
+            "postCreateCommand": "pip install -r cargo.toml"
+        }
+    ```
+
+
+2. Add ```cargo.toml``` Rust Dependency Configuration
+    - Add **```cargo.toml```** with the following content: 
+    ```
+        [package]
+        name = "comp423-rust"
+        version = "0.1.0"
+     ```
+
+3. Reopen the project in a VSCode Dev Container by pressing ```Ctrl+Shift+P``` (or ```Cmd+Shift+P ``` on Mac), typing "Dev Containers: Reopen in Container," and selecting the option. This may takes a few minutes while the image is downloaded and the requirements are installed.
+
+
+
+
+
+
 
 
 ### Citations: 
