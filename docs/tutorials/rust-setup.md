@@ -87,8 +87,7 @@ In this section, we will create a dev container for Rust!
 
 1. Add Development Container Configuration
     - Go to VS Code and open ```comp423-rust``` directory. 
-    - Install the **Dev Containers** and **rust-analyzer** extensions for VS Code.
-    - Check Rust version using this commend: ```rustc --version``` in terminal or command prompt. 
+    - Install the **Dev Containers** and **rust-analyzer** extensions for VS Code. 
     - Create a ```.devcontainer``` directory in the root of your project with the following file inside this "hidden" configuration directory: ```.devcontainer/devcontainer.json```
     - Add the following content inside ```devcontainer.json```. 
 
@@ -123,7 +122,9 @@ In this section, we will create a dev container for Rust!
 
 
 ## Initialize a Rust Project
-1. Run this following commands in your terminal (inside the container). This command creates a new directory and project called *hello_cargo*. 
+1. Check Rust version using this commend: ```rustc --version``` in terminal or command prompt.
+
+2. Run this following commands in your terminal (inside the container). This command creates a new directory and project called *hello_cargo*. 
 
     ```console
     cargo new hello_cargo --vcs none
