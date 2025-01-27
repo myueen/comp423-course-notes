@@ -162,8 +162,8 @@ In this section, we will create a dev container for Rust!
 
 If all goes well, this command should print out **"Hello World!"** in the terminal.
 
-<!-- !!! note "Difference between ```cargo build``` and ```cargo run```"
-    The command ```cargo build``` creates an execute -->
+!!! note "Difference between ```cargo build``` and ```cargo run```"
+    The command ```cargo build``` creates an executable binary file in your current directory. After that, ```cargo run``` compile and run the executable in one command. 
 
 Congradulation on writing your first Rust program in a dev container! 
 
