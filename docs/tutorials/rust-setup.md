@@ -120,8 +120,8 @@ rustc 1.83.0 (90b35a623 2024-11-26)
 2. Run this following commands in your terminal (inside the container). This command creates a new directory and project called *hello_world*. Inside the *hello_world* folder, you will find a ```src``` folder and a file named ```main.rs```. 
 
     ```console
-    cargo new hello_world --vcs none
-    cd hello_world
+    cargo new hello_comp423 --vcs none
+    cd hello_comp423
     ```
 
     !!! note "Note on ```---vcs``` none"
@@ -140,18 +140,19 @@ rustc 1.83.0 (90b35a623 2024-11-26)
     [dependencies]
     ```
 
-    - Insie the ```src/main.rs```, you will see cargo has generated a ''Hello World" program for you:
+    - Inside the ```src/main.rs```, write the following content:
 
     ```rust
     fn main() {
-        println!("Hello, world!");
+        println!("Hello COMP423");
     }
     ```
+    
 
 
 
 ## Building and Running a Cargo Project
-1. If you are not inside the ```hello_world``` directory, type in the following command ```cd hello_world``` to change the directory.
+1. If you are not inside the ```hello_comp423``` directory, type in the following command ```cd hello_comp423``` to change the directory.
 
 2. From your hello_world directory, build your project by using the following command:  
 
