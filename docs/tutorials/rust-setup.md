@@ -93,42 +93,36 @@ In this section, we will create a dev container for Rust!
 
     ```json
     {
-        "name": "comp423 Rust",
-        "image": "mcr.microsoft.com/devcontainers/rust:latest",
-        "customizations": {
-            "vscode": {
-                "settings": {},
-                "extensions": ["ms-rust.rust"]
-            }
-        },
-        "postCreateCommand": "pip install -r cargo.toml"
+    "name": "Rust Development Environment",
+    "image": "mcr.microsoft.com/devcontainers/rust:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "rust-lang.rust-analyzer"
+            ]
+        }
+    }
     }
     ```
 
-
-2. Add ```cargo.toml``` Rust dependency configuration with the following content: 
-    
-    ```
-    [package]
-    name = "hello_cargo"
-    version = "0.1.0"
-    edition = "2024"
-    ```
-
-3. Reopen the project in a VSCode Dev Container by pressing ```Ctrl+Shift+P``` (or ```Cmd+Shift+P ``` on Mac), typing "Dev Containers: Reopen in Container," and selecting the option. This may takes a few minutes while the image is downloaded and the requirements are installed.
+2. Reopen the project in a VSCode Dev Container by pressing ```Ctrl+Shift+P``` (or ```Cmd+Shift+P ``` on Mac), typing "Dev Containers: Reopen in Container," and selecting the option. This may takes a few minutes while the image is downloaded and the requirements are installed.
 
 
 
 
 
-## Initialize a Rust Project
-1. Check Rust version using this commend: ```rustc --version``` in terminal or command prompt.
+## Initialize a Hello-World Rust Project 
+1. Inside your ```comp423-rust``` folder and within the ```main``` branch, check Rust version using this commend: ```rustc --version``` in terminal or command prompt. It will display something like: 
 
-2. Run this following commands in your terminal (inside the container). This command creates a new directory and project called *hello_cargo*. 
+```
+rustc 1.83.0 (90b35a623 2024-11-26)
+```
+
+2. Run this following commands in your terminal (inside the container). This command creates a new directory and project called *hello_world*. Inside the *hello_world* folder, you will find a ```src``` folder and a file named ```main.rs```. 
 
     ```console
-    cargo new hello_cargo --vcs none
-    cd hello_cargo
+    cargo new hello_world --vcs none
+    cd hello_world
     ```
 
     !!! note "Note on ```---vcs``` none"
@@ -136,10 +130,18 @@ In this section, we will create a dev container for Rust!
         The **```---vcs```** flag does not create a new ```git``` repository automatically on your behalf. 
 
 
+    - The Cargo.toml file is called a manifest, and it contains all the metadata that Cargo needs to compile your pacakage. It will contains the following in this example: 
 
+    ```
+    [package]
+    name = "hello_world"
+    version = "0.1.0"
+    edition = "2021"
 
-## Create a ```Hello World``` Example
-1. Create a new rust file name ```hello_world.rs``` and print **Hello, World!** using the following content: 
+    [dependencies]
+    ```
+
+    - Insie the ```src/main.rs```, you will see cargo has generated a ''Hello World" program for you:
 
     ```rust
     fn main() {
@@ -150,13 +152,15 @@ In this section, we will create a dev container for Rust!
 
 
 ## Building and Running a Cargo Project
-1. From your hello_cargo directory, build your project by using the following command:  
+1. If you are not inside the ```hello_world``` directory, type in the following command ```cd hello_world``` to change the directory.
+
+2. From your hello_world directory, build your project by using the following command:  
 
     ```console
     cargo build
     ```
     
-2. Compile the code and run the executable in this following command:
+3. Compile the code and run the executable in this following command:
 
     ```console
     cargo run
