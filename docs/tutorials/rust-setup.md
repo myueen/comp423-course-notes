@@ -117,7 +117,7 @@ In this section, we will create a dev container for Rust!
 rustc 1.83.0 (90b35a623 2024-11-26)
 ```
 
-2. Run this following commands in your terminal (inside the container). This command creates a new directory and project called *hello_world*. Inside the *hello_world* folder, you will find a ```src``` folder and a file named ```main.rs```. 
+2. Run this following commands in your terminal (inside the container). This command creates a new directory and project called *hello_comp423*. Inside the *hello_comp423* folder, you will find a ```src``` folder and a file named ```main.rs```. 
 
     ```console
     cargo new hello_comp423 --vcs none
@@ -133,7 +133,7 @@ rustc 1.83.0 (90b35a623 2024-11-26)
 
     ```
     [package]
-    name = "hello_world"
+    name = "hello_comp423"
     version = "0.1.0"
     edition = "2021"
 
@@ -154,7 +154,7 @@ rustc 1.83.0 (90b35a623 2024-11-26)
 ## Building and Running a Cargo Project
 1. If you are not inside the ```hello_comp423``` directory, type in the following command ```cd hello_comp423``` to change the directory.
 
-2. From your hello_world directory, build your project by using the following command:  
+2. From your hello_comp423 directory, build your project by using the following command:  
 
     ```console
     cargo build
@@ -166,7 +166,7 @@ rustc 1.83.0 (90b35a623 2024-11-26)
     cargo run
     ```
 
-If all goes well, this command should print out **"Hello World!"** in the terminal.
+If all goes well, this command should print out **"Hello COMP423"** in the terminal.
 
 !!! note "Difference between ```cargo build``` and ```cargo run```"
     The command ```cargo build``` creates an executable binary file in your current directory. After that, ```cargo run``` compile and run the executable in one command. 
