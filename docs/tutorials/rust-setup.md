@@ -36,7 +36,6 @@ In this section, we will create a local repository for this project and link it 
     ```
 
     !!! note "Create a New Directory"
-
         This step will create a folder comp423-rust in your home directory. If you want this folder elsewhere, go ahead and change to that parent directory first. 
 
  
